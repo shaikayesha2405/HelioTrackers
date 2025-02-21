@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helio-Track Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f1f1;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header section containing logo and ribbon text */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            background-color: #ffcc00;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        .ribbon-text {
+            flex: 1;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 5px;
+            margin-right: 100px;
+        }
+
+        /* Flexbox for buttons and images in a row */
+        .dashboard {
+            display: flex;
+            justify-content: center; /* Center content */
+            gap: 30px; /* Space between items */
+            margin-top: 40px;
+            flex-wrap: wrap; /* Ensures proper layout on small screens */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-container img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .button {
+            background-color: #ffcc00;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 150px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #b9b2a2;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard {
+                flex-wrap: wrap; /* Allow wrapping for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo on the left and text beside it in a ribbon -->
+    <div class="header">
+        <div class="logo">
+            <img src="C:\Users\sweet\OneDrive\Desktop\Solar Tracking System\Logo.jpeg" alt="Helio-Track Logo">
+        </div>
+        <div class="ribbon-text">Helio-Tracker</div>
+    </div>
+
+    <div class="dashboard">
+        <div class="button-container">
+            <img src="C:\Users\sweet\OneDrive\Desktop\Solar Tracking System\Temperature.png" alt="Temperature Icon">
+            <a href="temperature.html" class="button" target="_blank">Temperature</a>
+        </div>
+        <div class="button-container">
+            <img src="C:\Users\sweet\OneDrive\Desktop\Solar Tracking System\Humidity.jpg" alt="Humidity Icon">
+            <a href="humidity.html" class="button" target="_blank">Humidity</a>
+        </div>
+        <div class="button-container">
+            <img src="C:\Users\sweet\OneDrive\Desktop\Solar Tracking System\Current1.jpg" alt="Current Icon">
+            <a href="current.html" class="button" target="_blank">Current</a>
+        </div>
+        <div class="button-container">
+            <img src="C:\Users\sweet\OneDrive\Desktop\Solar Tracking System\Voltage.jpg" alt="Voltage Icon">
+            <a href="voltage.html" class="button" target="_blank">Voltage</a>
+        </div>
+    </div>
+
+</body>
+</html>

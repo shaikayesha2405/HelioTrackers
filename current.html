@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current</title>
+  <style>
+    /* General Page Styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: rgb(219, 208, 208);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header (Ribbon) Styling */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffcc00;
+      padding: 10px 20px;
+    }
+
+    /* Logo Styling */
+    .logo img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgb(8, 7, 7);
+    }
+
+    /* Ribbon Text */
+    .ribbon-text {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Button Container */
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Button Styling */
+    .header-button {
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    /* Button Hover Effect */
+    .header-button:hover {
+      background-color: #555;
+    }
+
+    /* Chart Container Styling */
+    .chart-container {
+      width: 90%;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .chart-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Chart Title */
+    .chart-container h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Chart Frame */
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo, Title, and Buttons -->
+  <div class="header">
+    <div class="logo">
+      <img src="C:\Users\sweet\OneDrive\Desktop\Solar Tracking System\Current1.jpg" alt="Temperature Logo">
+    </div>
+    <div class="ribbon-text">Current Monitoring</div>
+    <div class="button-container">
+        <button class="header-button" onclick="location.href='Home.html'">Home</button>
+      <button class="header-button" onclick="location.href='temperature.html'">Temperature</button>
+      <button class="header-button" onclick="location.href='humidity.html'">Humidity</button>
+      <button class="header-button" onclick="location.href='voltage.html'">Voltage</button>
+    </div>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="chart-container">
+    <h2>Current</h2>
+    <iframe src="https://thingspeak.com/channels/2850348/charts/3?bgcolor=%23ffffff&color=%230000ff&dynamic=true&results=60&type=line"></iframe>
+  </div>
+
+
+</body>
+</html>
