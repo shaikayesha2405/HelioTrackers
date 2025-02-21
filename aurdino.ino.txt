@@ -1,0 +1,33 @@
+#include <DHT.h>
+#include <SoftwareSerial.h>
+
+#define VOLTAGE_SENSOR_PIN A0
+#define CURRENT_SENSOR_PIN A1
+#define TEMP_SENSOR_PIN 2
+
+const float VOLTAGE_CALIBRATION = 0.00488;
+const float CURRENT_CALIBRATION = 0.0264;
+
+#define DHT_TYPE DHT11
+DHT dht(2, DHT11);
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+}
+
+void loop() {
+  float voltage = analogRead(VOLTAGE_SENSOR_PIN) * VOLTAGE_CALIBRATION;
+  float current = analogRead(CURRENT_SENSOR_PIN) * CURRENT_CALIBRATION;
+  float temperature = dht.readTemperature();
+
+  if (isnan(temperature)) {
+    Serial.println("Failed to read temperature sensor!");
+    return;
+  }
+
+  String data = String(voltage) + "," + String(current) + "," + String(temperature);
+  Serial.println(data);
+
+  delay(5000);
+}
